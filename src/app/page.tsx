@@ -19,58 +19,64 @@ import {
   LucideImage,
   LucideClock,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#1d0e26] text-[#f5e8c7] p-6">
+    <main className="min-h-screen text-[#f5e8c7]">
       {/* Hero Section */}
-      <section className="text-center max-w-3xl mx-auto pt-8 pb-12">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-yellow-300">
-          Done-For-You Creative Production That Sells Your Brand
-        </h1>
-        <p className="mt-6 text-lg text-[#d4c2aa]">
-          I'm Ziv – your digital creative partner. I craft content that blends
-          strategy, storytelling, and standout visuals for brands ready to move
-          fast and leave a mark.
-        </p>
-        <div className="mt-8">
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-            Start My Project
-          </Button>
+      <section className="bg-[#25060d]">
+        <div className="text-center max-w-3xl mx-auto pt-8 pb-12 p-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-primary">
+            Done-For-You Creative Production That Sells Your Brand
+          </h1>
+          <p className="mt-6 text-lg text-muted">
+            I'm Ziv – your digital creative partner. I craft content that blends
+            strategy, storytelling, and standout visuals for brands ready to
+            move fast and leave a mark.
+          </p>
+          <div className="mt-8">
+            <Link
+              href={`/contact`}
+              className="bg-primary hover:bg-primary/85 text-muted font-semibold py-2 px-3 rounded-md"
+            >
+              Start My Project
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Services Grid with Dialog Modals */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto py-4">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto py-4 p-6">
         {/* Signature Visual Campaigns */}
-        <Card className="bg-[#2d1a35] border border-yellow-600/30">
+        <Card className="border border-yellow-600/30">
           <CardContent className="p-6">
             <LucideClapperboard className="h-8 w-8 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-yellow-200">
+            <h3 className="text-xl font-semibold text-primary">
               Signature Visual Campaigns
             </h3>
-            <p className="mt-2 text-[#d4c2aa]">
+            <p className="mt-2 text-muted-foreground">
               From strategy to screen – done-for-you content that sells.
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-medium">
+                <Button className="mt-4 bg-primary hover:bg-primary/85 text-muted font-medium">
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="bg-[#1d0e26] text-[#f5e8c7] border border-yellow-600">
+              <DialogContent className="text-muted-foreground border border-primary">
                 <DialogHeader>
-                  <h2 className="text-2xl font-bold text-yellow-300 mb-2">
+                  <h2 className="text-2xl font-bold text-primary mb-2">
                     What I Offer
                   </h2>
-                  <p className="mb-4 text-[#d4c2aa]">
+                  <p className="mb-4 text-muted-foreground">
                     Where strategy meets style — and turns into content that
                     moves.
                   </p>
                 </DialogHeader>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-yellow-200 font-semibold">
+                    <h3 className="text-primary font-semibold">
                       🔲 1. Signature Visual Campaigns
                     </h3>
                     <p>
@@ -85,17 +91,17 @@ export default function HomePage() {
                       <li>Cast highlights / trailers</li>
                       <li>Entertainment or product-based promos</li>
                     </ul>
-                    {/* <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                    {/* <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                       Book a Campaign
                     </Button> */}
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                  <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                     Book a Campaign
                   </Button>
                 </DialogFooter>
-                {/* <Button className="mt-6 bg-yellow-600 text-black font-semibold">
+                {/* <Button className="mt-6 bg-primary text-black font-semibold">
                   Contact Me
                 </Button> */}
               </DialogContent>
@@ -104,30 +110,30 @@ export default function HomePage() {
         </Card>
 
         {/* Content Strategy & Creative Direction */}
-        <Card className="bg-[#2d1a35] border border-yellow-600/30">
+        <Card className="border border-yellow-600/30">
           <CardContent className="p-6">
             <LucideTrendingUp className="h-8 w-8 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-yellow-200">
+            <h3 className="text-xl font-semibold text-primary">
               Content Strategy & Creative Direction
             </h3>
-            <p className="mt-2 text-[#d4c2aa]">
+            <p className="mt-2 text-muted-foreground">
               Because visuals without strategy are just noise.
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-medium">
+                <Button className="mt-4 bg-primary hover:bg-primary/85 text-muted font-medium">
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="bg-[#1d0e26] text-[#f5e8c7] border border-yellow-600">
+              <DialogContent className="text-muted-foreground border border-primary">
                 <DialogHeader>
-                  <h2 className="text-2xl font-bold text-yellow-300 mb-2">
+                  <h2 className="text-2xl font-bold text-primary mb-2">
                     What I Offer
                   </h2>
                 </DialogHeader>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-yellow-200 font-semibold">
+                    <h3 className="text-primary font-semibold">
                       📈 2. Content Strategy & Creative Direction
                     </h3>
                     <p>📊 Because visuals without strategy are just noise.</p>
@@ -137,17 +143,17 @@ export default function HomePage() {
                       <li>Monthly rollout calendars</li>
                       <li>Direction that aligns with your niche</li>
                     </ul>
-                    {/* <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                    {/* <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                       Request Strategy Session
                     </Button> */}
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                  <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                     Request Strategy Session
                   </Button>
                 </DialogFooter>
-                {/* <Button className="mt-6 bg-yellow-600 text-black font-semibold">
+                {/* <Button className="mt-6 bg-primary text-black font-semibold">
                   Contact Me
                 </Button> */}
               </DialogContent>
@@ -156,30 +162,30 @@ export default function HomePage() {
         </Card>
 
         {/* Premium UGC & Branded Graphics */}
-        <Card className="bg-[#2d1a35] border border-yellow-600/30">
+        <Card className="border border-yellow-600/30">
           <CardContent className="p-6">
             <LucideImage className="h-8 w-8 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-yellow-200">
+            <h3 className="text-xl font-semibold text-primary">
               Premium UGC & Branded Graphics
             </h3>
-            <p className="mt-2 text-[#d4c2aa]">
+            <p className="mt-2 text-muted-foreground">
               High-converting content designed to match your vibe.
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-medium">
+                <Button className="mt-4 bg-primary hover:bg-primary/85 text-muted font-medium">
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="bg-[#1d0e26] text-[#f5e8c7] border border-yellow-600">
+              <DialogContent className="text-muted-foreground border border-primary">
                 <DialogHeader>
-                  <h2 className="text-2xl font-bold text-yellow-300 mb-2">
+                  <h2 className="text-2xl font-bold text-primary mb-2">
                     What I Offer
                   </h2>
                 </DialogHeader>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-yellow-200 font-semibold">
+                    <h3 className="text-primary font-semibold">
                       🧠 3. Premium UGC & Branded Graphics
                     </h3>
                     <p>
@@ -191,17 +197,17 @@ export default function HomePage() {
                       <li>Posters, promo cards</li>
                       <li>Templates you can reuse</li>
                     </ul>
-                    {/* <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                    {/* <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                       See UGC Packages
                     </Button> */}
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                  <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                     See UGC Packages
                   </Button>
                 </DialogFooter>
-                {/* <Button className="mt-6 bg-yellow-600 text-black font-semibold">
+                {/* <Button className="mt-6 bg-primary text-black font-semibold">
                   Contact Me
                 </Button> */}
               </DialogContent>
@@ -210,30 +216,30 @@ export default function HomePage() {
         </Card>
 
         {/* Fast Content for Busy Creators */}
-        <Card className="bg-[#2d1a35] border border-yellow-600/30">
+        <Card className="border border-yellow-600/30">
           <CardContent className="p-6">
             <LucideClock className="h-8 w-8 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-yellow-200">
+            <h3 className="text-xl font-semibold text-primary">
               Fast Content for Busy Creators
             </h3>
-            <p className="mt-2 text-[#d4c2aa]">
+            <p className="mt-2 text-muted-foreground">
               You're busy. I deliver – fast.
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-medium">
+                <Button className="mt-4 bg-primary hover:bg-primary/85 text-muted font-medium">
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="bg-[#1d0e26] text-[#f5e8c7] border border-yellow-600">
+              <DialogContent className="text-muted-foreground border border-primary">
                 <DialogHeader>
-                  <h2 className="text-2xl font-bold text-yellow-300 mb-2">
+                  <h2 className="text-2xl font-bold text-primary mb-2">
                     What I Offer
                   </h2>
                 </DialogHeader>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-yellow-200 font-semibold">
+                    <h3 className="text-primary font-semibold">
                       ⚡ 4. Fast Content for Busy Creators
                     </h3>
                     <p>⚙️ You’re busy. I deliver — fast.</p>
@@ -245,11 +251,11 @@ export default function HomePage() {
                     </ul>
                   </div>
                 </div>
-                {/* <Button className="mt-6 bg-yellow-600 text-black font-semibold">
+                {/* <Button className="mt-6 bg-primary text-black font-semibold">
                   Contact Me
                 </Button> */}
                 <DialogFooter>
-                  <Button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-black">
+                  <Button className="mt-2 bg-primary hover:bg-primary/85 text-muted">
                     Get It Fast
                   </Button>
                 </DialogFooter>
