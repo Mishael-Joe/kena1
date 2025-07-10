@@ -12,10 +12,10 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-20">
         {/* Logo and Brand Name */}
         <Link href="/" className="flex items-center space-x-2">
-          <span className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+          <span className="h-8 w-8 rounded-full bg-muted flex items-center justify-center text-[#25060d] font-bold">
             V
           </span>
-          <span className="font-semibold text-xl text-primary">Ziv</span>
+          <span className="font-semibold text-xl text-muted">Ziv</span>
         </Link>
       </div>
     </header>

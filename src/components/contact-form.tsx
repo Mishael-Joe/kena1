@@ -123,7 +123,11 @@ export default function ContactForm() {
       </div>
 
       {/* Submit button */}
-      <Button type="submit" disabled={status === "loading"} className="w-full">
+      <Button
+        type="submit"
+        disabled={status === "loading"}
+        className="w-full bg-[#25060d] hover:bg-[#25060d]/90"
+      >
         {status === "loading" ? (
           "Sending..."
         ) : (

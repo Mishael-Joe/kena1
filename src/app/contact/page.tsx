@@ -18,7 +18,7 @@ export default function ContactPage() {
     <div className="container mx-auto px-4 md:px-6 py-12">
       {/* Contact Header */}
       <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center text-primary">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
           Get in Touch
         </h1>
         <div className="max-w-3xl mx-auto text-center">
@@ -33,9 +33,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 text-primary">
-              Send a Message
-            </h2>
+            <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
             <ContactForm />
           </div>
 
@@ -43,7 +41,7 @@ export default function ContactPage() {
           <div>
             {/* FAQ */}
             <div className="mt-8">
-              <h2 className="text-2xl font-bold mb-6 text-primary">
+              <h2 className="text-2xl font-bold mb-6">
                 Frequently Asked Questions
               </h2>
               <Accordion type="single" collapsible className="w-full">
