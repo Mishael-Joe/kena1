@@ -3,7 +3,6 @@ This is a Next.js App Router + Tailwind v4 + TypeScript setup for a landing page
 It uses Shadcn UI components and includes professional developer comments for clarity.
 */
 
-// app/page.tsx
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -18,40 +17,49 @@ import {
   LucideTrendingUp,
   LucideImage,
   LucideClock,
+  PlayCircleIcon,
 } from "lucide-react";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen text-[#f5e8c7]">
+    <main className="min-h-screen text-[#f5e8c7] bg-white px-6 py-6 lg:px-20 space-y-16">
       {/* Hero Section */}
-      <section className="bg-[#25060d]">
-        <div className="text-center max-w-3xl mx-auto pt-8 pb-12 p-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-muted">
+      <section className="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold leading-tight text-foreground">
             Done-For-You Creative Production That Sells Your Brand
           </h1>
-          <p className="mt-6 text-lg text-muted">
+          <p className="text-muted-foreground mt-4 text-lg">
             I'm Ziv – your digital creative partner. I craft content that blends
             strategy, storytelling, and standout visuals for brands ready to
             move fast and leave a mark.
           </p>
-          <div className="mt-8">
+          <Button
+            className="mt-6 bg-yellow-600 hover:bg-yellow-700 text-white"
+            asChild
+          >
             <Link
               href={`/contact`}
               className="bg-muted hover:bg-muted/90 text-[#25060d] font-semibold py-2 px-3 rounded-md"
             >
               Start My Project
             </Link>
-          </div>
+          </Button>
+        </div>
+
+        {/* Video Section */}
+        <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+          <PlayCircleIcon className="w-14 h-14 text-gray-500" />
         </div>
       </section>
 
       {/* Services Grid with Dialog Modals */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto py-4 p-6">
+      <section className="grid md:grid-cols-2 gap-10">
         {/* Signature Visual Campaigns */}
-        <Card className="border border-yellow-600/30">
-          <CardContent className="p-6">
-            <LucideClapperboard className="h-8 w-8 text-yellow-400 mb-4" />
+        <Card>
+          <CardContent className="p-6 space-y-2">
+            <LucideClapperboard className="h-8 w-8 text-yellow-600 mb-4" />
             <h3 className="text-xl font-semibold">
               Signature Visual Campaigns
             </h3>
@@ -60,11 +68,11 @@ export default function HomePage() {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-[#25060d] hover:bg-[#25060d]/85 text-muted font-medium">
+                <Button className="mt-4" variant={"outline"}>
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="text-muted-foreground border border-primary/30">
+              <DialogContent className="text-muted-foreground">
                 <DialogHeader>
                   <h2 className="text-2xl font-bold mb-2">What I Offer</h2>
                   <p className="mb-4 text-muted-foreground">
@@ -89,31 +97,22 @@ export default function HomePage() {
                       <li>Cast highlights / trailers</li>
                       <li>Entertainment or product-based promos</li>
                     </ul>
-                    {/* <Button className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted" asChild>
-                      Book a Campaign
-                    </Button> */}
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button
-                    className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted"
-                    asChild
-                  >
+                  <Button className="mt-2" variant={"outline"} asChild>
                     <Link href="/contact">Book a Campaign</Link>
                   </Button>
                 </DialogFooter>
-                {/* <Button className="mt-6 bg-primary text-black font-semibold">
-                  Contact Me
-                </Button> */}
               </DialogContent>
             </Dialog>
           </CardContent>
         </Card>
 
         {/* Content Strategy & Creative Direction */}
-        <Card className="border border-yellow-600/30">
-          <CardContent className="p-6">
-            <LucideTrendingUp className="h-8 w-8 text-yellow-400 mb-4" />
+        <Card>
+          <CardContent className="p-6 space-y-2">
+            <LucideTrendingUp className="h-8 w-8 text-yellow-600 mb-4" />
             <h3 className="text-xl font-semibold">
               Content Strategy & Creative Direction
             </h3>
@@ -122,11 +121,11 @@ export default function HomePage() {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-[#25060d] hover:bg-[#25060d]/85 text-muted font-medium">
+                <Button className="mt-4" variant={"outline"}>
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="text-muted-foreground border border-primary/30">
+              <DialogContent className="text-muted-foreground">
                 <DialogHeader>
                   <h2 className="text-2xl font-bold mb-2">What I Offer</h2>
                 </DialogHeader>
@@ -142,31 +141,22 @@ export default function HomePage() {
                       <li>Monthly rollout calendars</li>
                       <li>Direction that aligns with your niche</li>
                     </ul>
-                    {/* <Button className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted" asChild>
-                      Request Strategy Session
-                    </Button> */}
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button
-                    className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted"
-                    asChild
-                  >
+                  <Button className="mt-2" variant={"outline"} asChild>
                     <Link href="/contact">Request Strategy Session</Link>
                   </Button>
                 </DialogFooter>
-                {/* <Button className="mt-6 bg-primary text-black font-semibold">
-                  Contact Me
-                </Button> */}
               </DialogContent>
             </Dialog>
           </CardContent>
         </Card>
 
         {/* Premium UGC & Branded Graphics */}
-        <Card className="border border-yellow-600/30">
-          <CardContent className="p-6">
-            <LucideImage className="h-8 w-8 text-yellow-400 mb-4" />
+        <Card>
+          <CardContent className="p-6 space-y-2">
+            <LucideImage className="h-8 w-8 text-yellow-600 mb-4" />
             <h3 className="text-xl font-semibold">
               Premium UGC & Branded Graphics
             </h3>
@@ -175,11 +165,11 @@ export default function HomePage() {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-[#25060d] hover:bg-[#25060d]/85 text-muted font-medium">
+                <Button className="mt-4" variant={"outline"}>
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="text-muted-foreground border border-primary/30">
+              <DialogContent className="text-muted-foreground">
                 <DialogHeader>
                   <h2 className="text-2xl font-bold mb-2">What I Offer</h2>
                 </DialogHeader>
@@ -197,31 +187,22 @@ export default function HomePage() {
                       <li>Posters, promo cards</li>
                       <li>Templates you can reuse</li>
                     </ul>
-                    {/* <Button className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted" asChild>
-                      See UGC Packages
-                    </Button> */}
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button
-                    className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted"
-                    asChild
-                  >
+                  <Button className="mt-2" variant={"outline"} asChild>
                     <Link href="/contact">See UGC Packages</Link>
                   </Button>
                 </DialogFooter>
-                {/* <Button className="mt-6 bg-primary text-black font-semibold">
-                  Contact Me
-                </Button> */}
               </DialogContent>
             </Dialog>
           </CardContent>
         </Card>
 
         {/* Fast Content for Busy Creators */}
-        <Card className="border border-yellow-600/30">
-          <CardContent className="p-6">
-            <LucideClock className="h-8 w-8 text-yellow-400 mb-4" />
+        <Card>
+          <CardContent className="p-6 space-y-2">
+            <LucideClock className="h-8 w-8 text-yellow-600 mb-4" />
             <h3 className="text-xl font-semibold">
               Fast Content for Busy Creators
             </h3>
@@ -230,11 +211,11 @@ export default function HomePage() {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="mt-4 bg-[#25060d] hover:bg-[#25060d]/85 text-muted font-medium">
+                <Button className="mt-4" variant={"outline"}>
                   Learn More
                 </Button>
               </DialogTrigger>
-              <DialogContent className="text-muted-foreground border border-primary/30">
+              <DialogContent className="text-muted-foreground">
                 <DialogHeader>
                   <h2 className="text-2xl font-bold mb-2">What I Offer</h2>
                 </DialogHeader>
@@ -252,14 +233,8 @@ export default function HomePage() {
                     </ul>
                   </div>
                 </div>
-                {/* <Button className="mt-6 bg-primary text-black font-semibold">
-                  Contact Me
-                </Button> */}
                 <DialogFooter>
-                  <Button
-                    className="mt-2 bg-[#25060d] hover:bg-[#25060d]/85 text-muted"
-                    asChild
-                  >
+                  <Button className="mt-2" variant={"outline"} asChild>
                     <Link href="/contact">Get It Fast</Link>
                   </Button>
                 </DialogFooter>
